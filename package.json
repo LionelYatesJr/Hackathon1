@@ -1,0 +1,19 @@
+{
+    "name": "nc-at-project",
+    "version": "1.0.0",
+    "scripts": {
+        "install:client": "cd client && npm install",
+        "install:server": "cd server && npm install",
+        "install": "npm run install:client && npm run install:server",
+        "start:client": "cd client && npm start",
+        "start:server": "cd server && npm start",
+        "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
+        "build:client": "cd client && npm run build"
+    },
+    "devDependencies": {
+        "concurrently": "^6.0.0"
+    },
+    "dependencies": {
+        "csv-parser": "^3.0.0"
+    }
+}
